@@ -21,7 +21,8 @@ namespace TextToTalk.Backends
         {
             this.config = config;
             this.sharedState = sharedState;
-            this.backend = CreateBackendFor(this.config.Backend);
+
+            SetBackend(this.config.Backend);
         }
 
         public override void Say(TextSource source, Gender gender, string text)
